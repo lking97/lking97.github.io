@@ -1,79 +1,205 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-<head>
-  <!-- This tells the browser how to read the document. -->
-  <meta charset="utf-8">
+  <head>
 
-  <!-- Tells the browser what the title of this page should be. -->
-  <title>Resume</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet">
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <!--
-  Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
-  -->
-<script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <title>Portfolio Site</title>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-<body>
-  <div id="main">
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div>
-  <script src="js/jQuery.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- More on helper.js in the class -->
-  <script src="js/helper.js"></script>
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-  <script src="js/resumeBuilder.js"></script>
-  <script>
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
 
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
-</body>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Lloyd King</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1 id="homeHeading">Welcome to my portfolio site</h1>
+          <hr>
+          <p>Here is where I'll be displaying experience, projects, and a few details about who i am as a person. Now prepare yourself for a journey through time.</p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Let's Go!</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">What about me?</h2>
+            <hr class="light">
+            <p class="text-faded">I was once a computer engineering major in college but decided to make a change. I'm currently perfecting my craft in web development, specifically front-end web development. I have a few other skills and experiences outside of porgramming but I'll saved that for a different portfolio.</p>
+            <a class="btn btn-default btn-xl js-scroll-trigger" href="#skills">My skills?</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Oh yes, my skills (and attributes)!</h2>
+            <hr class="primary">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-code text-primary sr-icons"></i>
+              <h3>Programming</h3>
+              <p class="text-muted">I have a diverse background in machine code. I have a lot of experience with Javascript and C++. A little of experience with C# and Java. </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-html5 text-primary sr-icons"></i>
+              <h3>HTML5</h3>
+              <p class="text-muted">One of my favorite languages. I like to design layouts for my pages.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-css3 text-primary sr-icons"></i>
+              <h3>CSS3</h3>
+              <p class="text-muted">Another one of my favorites. I also like to some pizazz to my pages.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-search text-primary sr-icons"></i>
+              <h3>Research</h3>
+              <p class="text-muted">I like to stay on top of current topics. I always research new technology and advances in computer technology, languages, and structures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-0" id="portfolio">
+      <div class="container-fluid">
+        <div class="row no-gutter popup-gallery">
+          <div class="col-lg-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/ArcadeGame.gif">
+              <img class="img-fluid" src="img/portfolio/thumbnails/ArcadeGame1.gif" alt="Arcade Game with frogger elements">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    Javascript
+                  </div>
+                  <div class="project-name">
+                    Arcade Game
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <a class="portfolio-box" href="img/portfolio/fullsize/ResposiveSite.gif">
+              <img class="img-fluid" src="img/portfolio/thumbnails/ResponsiveSite.gif" alt="">
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">HTML and CSS</div>
+                  <div class="project-name">
+                    Responsive Site
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="primary">
+            <p>Contact me by any of the choices below.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-4x sr-contact"></i>
+            <p>
+              <a href="mailto:lking3497@gmail.com">lking3497@gmail.com</a>
+            </p>
+          </div>
+            <div class="col-lg-4 ml-auto text-center">
+              <i class="fa fa-linkedin-square fa-4x sr-contact" ></i>
+              <p>
+                <a href="https://www.linkedin.com/in/lloyd-o-king-jr-a40353112/">Lloyd O King Jr</a></p>
+            </div>
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-github fa-4x sr-contact"></i>
+            <p>
+                <a href="https://github.com/lking97/">lking97</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+  </body>
+
 </html>
