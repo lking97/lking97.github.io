@@ -68,6 +68,41 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
+.profile-img {
+  position: relative;
+  width: 343px;
+  height: 607px;
+  max-width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.profile-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 343px;
+  height: 607px;
+  max-width: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  display: block;
+}
+
+.profile-img .hover-img {
+  opacity: 0;
+  z-index: 1;
+}
+
+.profile-img:hover .hover-img {
+  opacity: 1;
+}
+
+.profile-img:hover .default-img {
+  opacity: 0;
+}
+
 .text-content {
   display: flex;
   flex-direction: column;
